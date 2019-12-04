@@ -134,35 +134,37 @@ NexT.utils = {
 
   registerScrollPercent: function() {
     var THRESHOLD = 50;
-    var backToTop = document.querySelector('.back-to-top');
-    var readingProgressBar = document.querySelector('.reading-progress-bar');
-    // For init back to top in sidebar if page was scrolled after page refresh.
-    window.addEventListener('scroll', () => {
-      var scrollPercent;
-      if (backToTop || readingProgressBar) {
-        var docHeight = document.querySelector('.container').offsetHeight;
-        var winHeight = window.innerHeight;
-        var contentVisibilityHeight = docHeight > winHeight ? docHeight - winHeight : document.body.scrollHeight - winHeight;
-        var scrollPercentRounded = Math.round(100 * window.scrollY / contentVisibilityHeight);
-        scrollPercent = Math.min(scrollPercentRounded, 100) + '%';
-      }
-      if (backToTop) {
-        backToTop.classList.toggle('back-to-top-on', window.scrollY > THRESHOLD);
-        backToTop.querySelector('span').innerText = scrollPercent;
-      }
-      if (readingProgressBar) {
-        readingProgressBar.style.width = scrollPercent;
-      }
-    });
-
-    backToTop && backToTop.addEventListener('click', () => {
-      window.anime({
-        targets  : [document.documentElement, document.body],
-        duration : 500,
-        easing   : 'linear',
-        scrollTop: 0
+    var backToTopAll = document.querySelectorAll('.back-to-top');
+    backToTopAll.forEach(backToTop => {
+      var readingProgressBar = document.querySelector('.reading-progress-bar');
+      // For init back to top in sidebar if page was scrolled after page refresh.
+      window.addEventListener('scroll', () => {
+        var scrollPercent;
+        if (backToTop || readingProgressBar) {
+          var docHeight = document.querySelector('.container').offsetHeight;
+          var winHeight = window.innerHeight;
+          var contentVisibilityHeight = docHeight > winHeight ? docHeight - winHeight : document.body.scrollHeight - winHeight;
+          var scrollPercentRounded = Math.round(100 * window.scrollY / contentVisibilityHeight);
+          scrollPercent = Math.min(scrollPercentRounded, 100) + '%';
+        }
+        if (backToTop) {
+          backToTop.classList.toggle('back-to-top-on', window.scrollY > THRESHOLD);
+          backToTop.querySelector('span').innerText = scrollPercent;
+        }
+        if (readingProgressBar) {
+          readingProgressBar.style.width = scrollPercent;
+        }
       });
-    });
+
+      backToTop && backToTop.addEventListener('click', () => {
+        window.anime({
+          targets  : [document.documentElement, document.body],
+          duration : 500,
+          easing   : 'linear',
+          scrollTop: 0
+        });
+      });
+    })
   },
 
   /**

@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #abdbf4;
+  background: #b0cbff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2029,7 +2029,7 @@ pre .javascript .function {
 }
 .github-emoji {
   display: inline-block;
-  width: 1em;
+  width: 0.8em;
   user-select: none;
 }
 .category-all-page .category-all-title {

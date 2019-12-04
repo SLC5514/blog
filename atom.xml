@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>知秋一叶</title>
+  <title>虚幻的光</title>
   
   <subtitle>万物皆有裂痕，那是光照进来的地方</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://slc5514.github.io/blog/"/>
-  <updated>2019-12-04T05:06:40.408Z</updated>
+  <updated>2019-12-04T06:17:33.545Z</updated>
   <id>https://slc5514.github.io/blog/</id>
   
   <author>
-    <name>虚幻的光</name>
+    <name>SLC</name>
     
   </author>
   
@@ -21,7 +21,7 @@
     <link href="https://slc5514.github.io/blog/2019/11/28/My-New-Post/"/>
     <id>https://slc5514.github.io/blog/2019/11/28/My-New-Post/</id>
     <published>2019-11-28T09:14:45.000Z</published>
-    <updated>2019-12-04T05:06:40.408Z</updated>
+    <updated>2019-12-04T06:17:33.545Z</updated>
     
     <summary type="html">
     
@@ -46,7 +46,7 @@
     <link href="https://slc5514.github.io/blog/2019/11/28/hello-world/"/>
     <id>https://slc5514.github.io/blog/2019/11/28/hello-world/</id>
     <published>2019-11-28T09:14:45.000Z</published>
-    <updated>2019-12-04T05:06:40.408Z</updated>
+    <updated>2019-12-04T06:17:33.545Z</updated>
     
     <summary type="html">
     

@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 知秋一叶
+title: 虚幻的光
 subtitle: '万物皆有裂痕，那是光照进来的地方'
 description: 'SLC の Blog'
 keywords: HTML,CSS,JS
-author: 虚幻的光
+author: SLC
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
@@ -106,7 +106,7 @@ githubEmojis:
   className: github-emoji
   inject: true
   styles:
-    font-size: 2em
+    font-size: 1em
   customEmojis:
 
 # 统计

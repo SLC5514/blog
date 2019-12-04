@@ -1,5 +1,6 @@
-{%- if theme.back2top.enable and not theme.back2top.sidebar %}
-  <div class="back-to-top">
+{%- if theme.back2top.enable %}
+  <!-- and not theme.back2top.sidebar -->
+  <div class="back-to-top init-element">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>

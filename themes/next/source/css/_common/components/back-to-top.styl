@@ -1,11 +1,12 @@
-.back-to-top {
+.back-to-top.init-element {
   background: $b2t-bg-color;
   bottom: $b2t-position-bottom;
   box-sizing: border-box;
   color: $b2t-color;
   cursor: pointer;
   font-size: $b2t-font-size;
-  left: $b2t-position-right;
+  // left: $b2t-position-right;
+  right: $b2t-position-right + 170px;
   opacity: $b2t-opacity;
   padding: 0 6px;
   position: fixed;
@@ -32,8 +33,15 @@
     bottom: $b2t-position-bottom-on;
   }
 
+  if (hexo-config('back2top.sidebar') && hexo-config('back2top.scrollpercent')) {
+    display: none;
+  }
+
   +tablet-mobile() {
-    left: $b2t-position-right-mobile;
+    display: block;
+    left: auto;
+    // left: $b2t-position-right-mobile;
+    right: $b2t-position-right-mobile;
     opacity: $b2t-opacity-hover;
   }
 }

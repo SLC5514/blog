@@ -69,3 +69,34 @@
 @import 'post-reward';
 
 @import 'post-copyright' if (hexo-config('creative_commons.post'));
+
+.post-body p a{
+  position: relative;
+  vertical-align: top;
+}
+
+.post-body p a::before {
+  background: #000;
+  bottom: 0;
+  content: '';
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  visibility: hidden;
+  width: 100%;
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.post-body p a:hover::before {
+    transform: scaleX(1);
+    visibility: visible;
+}
+
+.github-emoji {
+  display: inline-block;
+  width: 2em;
+  user-select: none;
+}

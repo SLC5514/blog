@@ -1,4 +1,6 @@
-@import (hexo-config('back2top.sidebar') ? 'back-to-top-sidebar' : 'back-to-top') if (hexo-config('back2top.enable'));
+// @import (hexo-config('back2top.sidebar') ? 'back-to-top-sidebar' : 'back-to-top') if (hexo-config('back2top.enable'));
+@import 'back-to-top-sidebar' if (hexo-config('back2top.enable'));
+@import 'back-to-top' if (hexo-config('back2top.enable'));
 
 @import 'reading-progress' if (hexo-config('reading_progress.enable'));
 

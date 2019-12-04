@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
+title: 知秋一叶
+subtitle: '万物皆有裂痕，那是光照进来的地方'
+description: 'SLC の Blog'
+keywords: HTML,CSS,JS
+author: 虚幻的光
 language: zh-CN
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -89,6 +89,34 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+
+# RSS订阅
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+
+# 表情符
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+    font-size: 2em
+  customEmojis:
+
+# 统计
+symbols_count_time:
+  symbols: true                # 文章字数统计
+  time: true                   # 文章阅读时长
+  total_symbols: true          # 站点总字数统计
+  total_time: true             # 站点总阅读时长
+  exclude_codeblock: false     # 排除代码字数统计
+
 ## Themes: https://hexo.io/themes/
 theme: next
 

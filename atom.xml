@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://slc5514.github.io/blog/"/>
-  <updated>2019-12-04T10:13:30.012Z</updated>
+  <updated>2019-12-05T09:56:22.535Z</updated>
   <id>https://slc5514.github.io/blog/</id>
   
   <author>
@@ -17,21 +17,146 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>闭包</title>
-    <link href="https://slc5514.github.io/blog/2019/12/04/%E9%97%AD%E5%8C%85/"/>
-    <id>https://slc5514.github.io/blog/2019/12/04/%E9%97%AD%E5%8C%85/</id>
-    <published>2019-12-04T09:57:49.000Z</published>
-    <updated>2019-12-04T10:13:30.012Z</updated>
+    <title>Javascript 面向对象编程（三）：非构造函数的继承</title>
+    <link href="https://slc5514.github.io/blog/2019/12/05/Javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E9%9D%9E%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E7%BB%A7%E6%89%BF/"/>
+    <id>https://slc5514.github.io/blog/2019/12/05/Javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9A%E9%9D%9E%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E7%BB%A7%E6%89%BF/</id>
+    <published>2019-12-05T08:43:11.000Z</published>
+    <updated>2019-12-05T09:56:22.535Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;闭包的概念&quot;&gt;&lt;a href=&quot;#闭包的概念&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;p&gt;这个系列的 &lt;a href=&quot;/blog/2019/12/05/Javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B0%81%E8%A3%85/&quot; title=&quot;第一部分&quot;&gt;第一部分&lt;/a&gt; 介绍了“封装”，&lt;a href=&quot;/blog/2019/12/05/Javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B0%81%E8%A3%85/&quot; title=&quot;第二部分&quot;&gt;第二部分&lt;/a&gt; 介绍了使用构造函数实现“继承”。&lt;/p&gt;
+&lt;p&gt;今天是最后一个部分，介绍不使用构造函数实现“继承”。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://slc5514.github.io/blog/categories/JavaScript/"/>
+    
+    
+      <category term="Js" scheme="https://slc5514.github.io/blog/tags/Js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Javascript 面向对象编程（二）：构造函数的继承</title>
+    <link href="https://slc5514.github.io/blog/2019/12/05/Javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E7%BB%A7%E6%89%BF/"/>
+    <id>https://slc5514.github.io/blog/2019/12/05/Javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E7%BB%A7%E6%89%BF/</id>
+    <published>2019-12-05T07:30:04.000Z</published>
+    <updated>2019-12-05T09:56:22.535Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这个系列的 &lt;a href=&quot;/blog/2019/12/05/Javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B0%81%E8%A3%85/&quot; title=&quot;第一部分&quot;&gt;第一部分&lt;/a&gt;，主要介绍了如何“封装”数据和方法，以及如何从原型对象生成实例。&lt;/p&gt;
+&lt;p&gt;今天要介绍的是，对象之间“继承”的五种方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://slc5514.github.io/blog/categories/JavaScript/"/>
+    
+    
+      <category term="Js" scheme="https://slc5514.github.io/blog/tags/Js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Javascript 面向对象编程（一）：封装</title>
+    <link href="https://slc5514.github.io/blog/2019/12/05/Javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B0%81%E8%A3%85/"/>
+    <id>https://slc5514.github.io/blog/2019/12/05/Javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B0%81%E8%A3%85/</id>
+    <published>2019-12-05T06:39:00.000Z</published>
+    <updated>2019-12-05T09:56:22.535Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;Javascript&lt;/strong&gt; 是一种基于对象（&lt;strong&gt;object-based&lt;/strong&gt;）的语言，你遇到的所有东西几乎都是对象。但是，它又不是一种真正的面向对象编程（&lt;strong&gt;OOP&lt;/strong&gt;）语言，因为它的语法中没有 &lt;code&gt;class&lt;/code&gt;（类）。&lt;/p&gt;
+&lt;p&gt;那么，如果我们要把”属性”（&lt;strong&gt;property&lt;/strong&gt;）和”方法”（&lt;strong&gt;method&lt;/strong&gt;），封装成一个对象，甚至要从原型对象生成一个实例对象，我们应该怎么做呢？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://slc5514.github.io/blog/categories/JavaScript/"/>
+    
+    
+      <category term="Js" scheme="https://slc5514.github.io/blog/tags/Js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Javascript 的 this 用法</title>
+    <link href="https://slc5514.github.io/blog/2019/12/05/Javascript%E7%9A%84this%E7%94%A8%E6%B3%95/"/>
+    <id>https://slc5514.github.io/blog/2019/12/05/Javascript%E7%9A%84this%E7%94%A8%E6%B3%95/</id>
+    <published>2019-12-05T05:24:24.000Z</published>
+    <updated>2019-12-05T09:56:22.535Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;this&lt;/code&gt; 是 &lt;strong&gt;JavaScript&lt;/strong&gt; 语言的一个关键字。&lt;/p&gt;
+&lt;p&gt;它是函数运行时，在函数体内部自动生成的一个对象，只能在函数体内部使用。&lt;/p&gt;
+&lt;p&gt;函数的不同使用场合，&lt;code&gt;this&lt;/code&gt; 有不同的值。总的来说，&lt;code&gt;this&lt;/code&gt; 就是函数运行时所在的环境对象。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://slc5514.github.io/blog/categories/JavaScript/"/>
+    
+    
+      <category term="Js" scheme="https://slc5514.github.io/blog/tags/Js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>12种不宜使用的Javascript语法</title>
+    <link href="https://slc5514.github.io/blog/2019/12/05/12%E7%A7%8D%E4%B8%8D%E5%AE%9C%E4%BD%BF%E7%94%A8%E7%9A%84Javascript%E8%AF%AD%E6%B3%95/"/>
+    <id>https://slc5514.github.io/blog/2019/12/05/12%E7%A7%8D%E4%B8%8D%E5%AE%9C%E4%BD%BF%E7%94%A8%E7%9A%84Javascript%E8%AF%AD%E6%B3%95/</id>
+    <published>2019-12-05T03:39:53.000Z</published>
+    <updated>2019-12-05T09:56:22.535Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在《Javascript 语言精粹》附录 B 中，&lt;strong&gt;Douglas Crockford&lt;/strong&gt; 列出了 12 种应该避免使用的 &lt;strong&gt;Javascript&lt;/strong&gt; 语法，我觉得非常值得推广。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://slc5514.github.io/blog/categories/JavaScript/"/>
+    
+    
+      <category term="Js" scheme="https://slc5514.github.io/blog/tags/Js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用Javascript获取页面元素的位置</title>
+    <link href="https://slc5514.github.io/blog/2019/12/05/%E7%94%A8Javascript%E8%8E%B7%E5%8F%96%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E7%9A%84%E4%BD%8D%E7%BD%AE/"/>
+    <id>https://slc5514.github.io/blog/2019/12/05/%E7%94%A8Javascript%E8%8E%B7%E5%8F%96%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E7%9A%84%E4%BD%8D%E7%BD%AE/</id>
+    <published>2019-12-05T02:56:23.000Z</published>
+    <updated>2019-12-05T09:56:22.535Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;制作网页的过程中，你有时候需要知道某个元素在网页上的确切位置。&lt;br&gt;下面的教程总结了 &lt;strong&gt;Javascript&lt;/strong&gt; 在网页定位方面的相关知识。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://slc5514.github.io/blog/categories/JavaScript/"/>
+    
+    
+      <category term="Js" scheme="https://slc5514.github.io/blog/tags/Js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学习Javascript闭包（Closure）</title>
+    <link href="https://slc5514.github.io/blog/2019/12/04/%E5%AD%A6%E4%B9%A0Javascript%E9%97%AD%E5%8C%85%EF%BC%88Closure%EF%BC%89/"/>
+    <id>https://slc5514.github.io/blog/2019/12/04/%E5%AD%A6%E4%B9%A0Javascript%E9%97%AD%E5%8C%85%EF%BC%88Closure%EF%BC%89/</id>
+    <published>2019-12-04T09:57:49.000Z</published>
+    <updated>2019-12-05T09:56:22.535Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;闭包（&lt;code&gt;closure&lt;/code&gt;）是 &lt;strong&gt;Javascript&lt;/strong&gt; 语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。&lt;/p&gt;
     
     </summary>
     
@@ -48,28 +173,23 @@
     <link href="https://slc5514.github.io/blog/2019/11/28/%E9%98%B2%E6%AD%A2%E7%BD%91%E9%A1%B5%E8%A2%AB%E5%B5%8C%E5%85%A5%E6%A1%86%E6%9E%B6%E7%9A%84%E4%BB%A3%E7%A0%81/"/>
     <id>https://slc5514.github.io/blog/2019/11/28/%E9%98%B2%E6%AD%A2%E7%BD%91%E9%A1%B5%E8%A2%AB%E5%B5%8C%E5%85%A5%E6%A1%86%E6%9E%B6%E7%9A%84%E4%BB%A3%E7%A0%81/</id>
     <published>2019-11-28T09:14:50.000Z</published>
-    <updated>2019-12-04T10:13:30.012Z</updated>
+    <updated>2019-12-05T09:56:22.535Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;防止使用框架（Frame），将你的网页嵌入它的网页中：&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
+      &lt;p&gt;防止使用框架（&lt;strong&gt;Frame&lt;/strong&gt;），将你的网页嵌入它的网页中&lt;/p&gt;
     
     </summary>
     
     
       <category term="JavaScript" scheme="https://slc5514.github.io/blog/categories/JavaScript/"/>
     
-      <category term="web安全" scheme="https://slc5514.github.io/blog/categories/JavaScript/web%E5%AE%89%E5%85%A8/"/>
+      <category term="web安全" scheme="https://slc5514.github.io/blog/categories/web%E5%AE%89%E5%85%A8/"/>
     
     
       <category term="Js" scheme="https://slc5514.github.io/blog/tags/Js/"/>
+    
+      <category term="web安全" scheme="https://slc5514.github.io/blog/tags/web%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
@@ -78,7 +198,7 @@
     <link href="https://slc5514.github.io/blog/2019/11/28/hello-world/"/>
     <id>https://slc5514.github.io/blog/2019/11/28/hello-world/</id>
     <published>2019-11-28T09:14:45.000Z</published>
-    <updated>2019-12-04T10:13:30.012Z</updated>
+    <updated>2019-12-05T09:56:22.535Z</updated>
     
     <summary type="html">
     

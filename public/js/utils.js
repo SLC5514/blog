@@ -225,6 +225,7 @@ NexT.utils = {
     const navItems = document.querySelectorAll('.post-toc li');
     const sections = [...navItems].map(element => {
       var link = element.querySelector('a.nav-link');
+      link.title = link.querySelector('.nav-text').innerText;
       // TOC item animation navigate.
       link.addEventListener('click', event => {
         event.preventDefault();

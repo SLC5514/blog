@@ -48,18 +48,18 @@
   };
 </script>
 
-  <meta name="description" content="document.querySelectorAll(&amp;apos;.github-emoji&amp;apos;)           .forEach(el &#x3D;&amp;gt; {             if (!el.dataset.src) { return; }             const img &#x3D; document.createElement(&amp;apos;img&amp;apos;);             img.style">
-<meta name="keywords" content="HTML,CSS,JS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https:&#x2F;&#x2F;slc5514.github.io&#x2F;blog&#x2F;about&#x2F;index.html">
+  <meta name="description" content="this 是 JavaScript 语言的一个关键字。 它是函数运行时，在函数体内部自动生成的一个对象，只能在函数体内部使用。 函数的不同使用场合，this 有不同的值。总的来说，this 就是函数运行时所在的环境对象。">
+<meta name="keywords" content="Js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript 的 this 用法">
+<meta property="og:url" content="https:&#x2F;&#x2F;slc5514.github.io&#x2F;blog&#x2F;2019&#x2F;12&#x2F;05&#x2F;Javascript%E7%9A%84this%E7%94%A8%E6%B3%95&#x2F;index.html">
 <meta property="og:site_name" content="虚幻的光">
-<meta property="og:description" content="document.querySelectorAll(&amp;apos;.github-emoji&amp;apos;)           .forEach(el &#x3D;&amp;gt; {             if (!el.dataset.src) { return; }             const img &#x3D; document.createElement(&amp;apos;img&amp;apos;);             img.style">
+<meta property="og:description" content="this 是 JavaScript 语言的一个关键字。 它是函数运行时，在函数体内部自动生成的一个对象，只能在函数体内部使用。 函数的不同使用场合，this 有不同的值。总的来说，this 就是函数运行时所在的环境对象。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-03T05:47:08.209Z">
+<meta property="og:updated_time" content="2019-12-05T07:21:21.584Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://slc5514.github.io/blog/about/">
+<link rel="canonical" href="https://slc5514.github.io/blog/2019/12/05/Javascript%E7%9A%84this%E7%94%A8%E6%B3%95/">
 
 
 <script id="page-configurations">
@@ -67,14 +67,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>关于 | 虚幻的光
-  </title>
+  <title>Javascript 的 this 用法 | 虚幻的光</title>
   
 
 
@@ -213,34 +212,104 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
-      <header class="post-header">
-
-<h2 class="post-title" itemprop="name headline">关于
-</h2>
-
-<div class="post-meta">
+      
   
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://slc5514.github.io/blog/blog/2019/12/05/Javascript%E7%9A%84this%E7%94%A8%E6%B3%95/">
 
-</div>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/slc.jpg">
+      <meta itemprop="name" content="SLC">
+      <meta itemprop="description" content="SLC の Blog">
+    </span>
 
-</header>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="虚幻的光">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          Javascript 的 this 用法
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-12-05 13:24:24 / 修改时间：15:21:21" itemprop="dateCreated datePublished" datetime="2019-12-05T13:24:24+08:00">2019-12-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>675</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-      
-      
-      <div class="post-body">
-          <script>
+        <p><code>this</code> 是 <strong>JavaScript</strong> 语言的一个关键字。</p>
+<p>它是函数运行时，在函数体内部自动生成的一个对象，只能在函数体内部使用。</p>
+<p>函数的不同使用场合，<code>this</code> 有不同的值。总的来说，<code>this</code> 就是函数运行时所在的环境对象。</p>
+<a id="more"></a>
+
+<h2 id="情况一：纯粹的函数调用"><a href="#情况一：纯粹的函数调用" class="headerlink" title="情况一：纯粹的函数调用"></a>情况一：纯粹的函数调用</h2><p>这是函数的最通常用法，属于全局性调用，因此 <code>this</code> 就代表全局对象。</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>{</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">this</span>.x = <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">}</span></pre></td></tr></tbody></table></figure>
+
+<h2 id="情况二：作为对象方法的调用"><a href="#情况二：作为对象方法的调用" class="headerlink" title="情况二：作为对象方法的调用"></a>情况二：作为对象方法的调用</h2><p>函数还可以作为某个对象的方法调用，这时 <code>this</code> 就指这个上级对象。</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>{</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.x);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">}</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = {};</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">obj.x = <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">obj.m = test;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">obj.m(); <span class="comment">// 1</span></span></pre></td></tr></tbody></table></figure>
+
+<h2 id="情况三-作为构造函数调用"><a href="#情况三-作为构造函数调用" class="headerlink" title="情况三 作为构造函数调用"></a>情况三 作为构造函数调用</h2><p>所谓构造函数，就是通过这个函数，可以生成一个新对象。这时，<code>this</code> 就指这个新对象。</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>{</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="keyword">this</span>.x = <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">}</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> test();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">obj.x; <span class="comment">// 1</span></span></pre></td></tr></tbody></table></figure>
+
+<h2 id="情况四-apply-调用"><a href="#情况四-apply-调用" class="headerlink" title="情况四 apply 调用"></a>情况四 apply 调用</h2><p><code>apply()</code> 是函数的一个方法，作用是改变函数的调用对象。它的第一个参数就表示改变后的调用这个函数的对象。因此，这时 <code>this</code> 指的就是这第一个参数。</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>{</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.x);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">}</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = {};</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">obj.x = <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">obj.m = test;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">obj.m.apply(); <span class="comment">// 0</span></span></pre></td></tr></tbody></table></figure>
+
+<blockquote><footer><strong>阮一峰</strong><cite><a href="http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html" target="_blank" rel="noopener">Javascript 的 this 用法</a></cite></footer></blockquote>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -259,16 +328,38 @@
             document.body.appendChild(img);
           });
       </script>
-      </div>
-      
-      
-      
     </div>
-    
 
     
     
     
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/Js/" rel="tag"># Js</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2019/12/05/12%E7%A7%8D%E4%B8%8D%E5%AE%9C%E4%BD%BF%E7%94%A8%E7%9A%84Javascript%E8%AF%AD%E6%B3%95/" rel="prev" title="12种不宜使用的Javascript语法">
+      <i class="fa fa-chevron-left"></i> 12种不宜使用的Javascript语法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/2019/12/05/Javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B0%81%E8%A3%85/" rel="next" title="Javascript 面向对象编程（一）：封装">
+      Javascript 面向对象编程（一）：封装 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
 
 
@@ -303,6 +394,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#情况一：纯粹的函数调用"><span class="nav-number">1.</span> <span class="nav-text">情况一：纯粹的函数调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#情况二：作为对象方法的调用"><span class="nav-number">2.</span> <span class="nav-text">情况二：作为对象方法的调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#情况三-作为构造函数调用"><span class="nav-number">3.</span> <span class="nav-text">情况三 作为构造函数调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#情况四-apply-调用"><span class="nav-number">4.</span> <span class="nav-text">情况四 apply 调用</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

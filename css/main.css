@@ -403,6 +403,13 @@ code {
   border: 0;
   padding: 0;
 }
+.highlight td.gutter {
+  position: absolute;
+  width: 38px;
+}
+.highlight td.code {
+  padding-left: 38px;
+}
 .highlight figcaption {
   background: #eee;
   color: #4d4d4c;
@@ -1168,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #5742c4;
+  background: #14c6fa;
   border-radius: 50%;
   content: ' ';
   display: inline-block;

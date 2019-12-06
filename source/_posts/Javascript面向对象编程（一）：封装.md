@@ -4,7 +4,7 @@ date: 2019-12-05 14:39:00
 categories:
   - [JavaScript]
 tags:
-  - Js
+  - JS
 ---
 
 **Javascript** 是一种基于对象（**object-based**）的语言，你遇到的所有东西几乎都是对象。但是，它又不是一种真正的面向对象编程（**OOP**）语言，因为它的语法中没有 `class`（类）。

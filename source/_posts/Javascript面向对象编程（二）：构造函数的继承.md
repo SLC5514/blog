@@ -4,7 +4,7 @@ date: 2019-12-05 15:30:04
 categories:
   - [JavaScript]
 tags:
-  - Js
+  - JS
 ---
 
 这个系列的 {% post_link Javascript面向对象编程（一）：封装 '第一部分' %}，主要介绍了如何“封装”数据和方法，以及如何从原型对象生成实例。

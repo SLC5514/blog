@@ -4,7 +4,7 @@ date: 2019-12-04 17:57:49
 categories:
   - [JavaScript]
 tags:
-  - Js
+  - JS
 ---
 
 闭包（`closure`）是 **Javascript** 语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。

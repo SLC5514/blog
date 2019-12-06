@@ -4,7 +4,7 @@ date: 2019-12-05 13:24:24
 categories:
   - [JavaScript]
 tags:
-  - Js
+  - JS
 ---
 
 `this` 是 **JavaScript** 语言的一个关键字。

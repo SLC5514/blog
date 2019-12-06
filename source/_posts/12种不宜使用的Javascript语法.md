@@ -4,7 +4,7 @@ date: 2019-12-05 11:39:53
 categories:
   - [JavaScript]
 tags:
-  - Js
+  - JS
 ---
 
 在《Javascript 语言精粹》附录 B 中，**Douglas Crockford** 列出了 12 种应该避免使用的 **Javascript** 语法，我觉得非常值得推广。

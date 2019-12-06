@@ -4,7 +4,7 @@ date: 2019-12-05 16:43:11
 categories:
   - [JavaScript]
 tags:
-  - Js
+  - JS
 ---
 
 这个系列的 {% post_link Javascript面向对象编程（一）：封装 '第一部分' %} 介绍了“封装”，{% post_link Javascript面向对象编程（一）：封装 '第二部分' %} 介绍了使用构造函数实现“继承”。

@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://slc5514.github.io/blog/"/>
-  <updated>2019-12-05T09:03:58.518Z</updated>
+  <updated>2019-12-06T03:07:36.560Z</updated>
   <id>https://slc5514.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS十大排序算法</title>
+    <link href="https://slc5514.github.io/blog/2019/12/06/JS%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <id>https://slc5514.github.io/blog/2019/12/06/JS%E5%8D%81%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</id>
+    <published>2019-12-06T02:07:25.000Z</published>
+    <updated>2019-12-06T03:07:36.560Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;排序算法（&lt;strong&gt;Sorting algorithm&lt;/strong&gt;）是计算机科学最古老、最基本的课题之一。要想成为合格的程序员，就必须理解和掌握各种排序算法。&lt;/p&gt;
+&lt;p&gt;目前，最常见的排序算法大概有七八种，其中”快速排序”（&lt;strong&gt;Quicksort&lt;/strong&gt;）使用得最广泛，速度也较快。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://slc5514.github.io/blog/categories/JavaScript/"/>
+    
+    
+      <category term="Js" scheme="https://slc5514.github.io/blog/tags/Js/"/>
+    
+      <category term="算法" scheme="https://slc5514.github.io/blog/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Javascript 面向对象编程（三）：非构造函数的继承</title>
